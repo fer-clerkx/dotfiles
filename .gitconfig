@@ -1,0 +1,19 @@
+[user]
+	name = Fer
+	email = ferclerkx@hotmail.com
+[alias]
+	logtree = log --oneline --graph --decorate
+	st = status
+	ss = status --short
+	ci = commit
+	co = checkout
+	unstage = reset HEAD --
+	aa = add --all
+	br = branch
+	bra = branch -all
+	fop = fetch origin --prune
+	last = log -1
+[includeIf "gitdir:school/"]
+	path = ~/dotfiles/.gitconfig.school
+[init]
+	defaultBranch = master
