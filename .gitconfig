@@ -16,4 +16,4 @@
 [includeIf "gitdir:school/"]
 	path = ~/dotfiles/.gitconfig.school
 [init]
-	defaultBranch = master
+	defaultBranch = main
