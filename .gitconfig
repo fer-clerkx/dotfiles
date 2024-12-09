@@ -17,3 +17,7 @@
 	path = ~/dotfiles/.gitconfig.school
 [init]
 	defaultBranch = main
+[submodule]
+	recurse = true
+[push]
+	recurseSubmodules = on-demand
