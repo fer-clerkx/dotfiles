@@ -21,3 +21,6 @@
 	recurse = true
 [push]
 	recurseSubmodules = on-demand
+[advice]
+	addIgnoredFile = false
+	statusHints = false
