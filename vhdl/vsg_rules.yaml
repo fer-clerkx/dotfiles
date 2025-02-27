@@ -1,0 +1,82 @@
+rule:
+  # Doxygen block comments
+  # block_comment_001:
+  #   disable: false
+  #   header_left: ''
+  #   header_left_repeat: '-'
+  #   header_string: ''
+  #   header_right_repeat: ''
+  # block_comment_002:
+  #   disable: false
+  #   comment_left: ''
+  # block_comment_003:
+  #   disable: false
+  #   footer_left: ''
+  #   footer_left_repeat: '-'
+  #   footer_string: ''
+  #   footer_right_repeat: ''
+
+  # Naming style
+  variable_012:
+    disable: false
+  constant_004:
+    case: upper
+    prefix_exceptions: 'c_'
+  constant_015:
+    disable: false
+  type_015:
+    disable: false
+  generic_007:
+    case: upper
+    prefix_exceptions: g_
+  generic_020:
+    disable: false
+  generic_map_601:
+    disable: false
+  port_025:
+    disable: false
+    suffixes: ['_i', '_o', '_b']
+  signal_008:
+    disable: false
+    prefixes: ['r_', 'w_']
+  process_036:
+    disable: false
+    prefixes: ['p_']
+  loop_statement_600:
+    disable: false
+    prefixes: ['l_']
+
+  # Instantiation
+  instantiation_028:
+    case: upper
+  instantiation_034:
+    disable: true
+
+  # Allignment/indentation
+  library_007:
+    style: no_blank_line_unless_different_library
+  concurrent_006:
+    disable: true
+  process_400:
+    disable: true
+  architecture_026:
+    blank_line_ends_group: 'yes'
+  architecture_029:
+    disable: 'yes'
+  type_011:
+    style: no_blank_line
+
+  # Default assignments
+  variable_007:
+    disable: true
+  port_012:
+    disable: true
+  signal_007:
+    disable: true
+
+indent:
+  tokens:
+    use_clause:
+      keyword:
+        token_after_library_clause: 0
+        token_if_no_matching_library_clause: 0
