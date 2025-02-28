@@ -38,17 +38,46 @@ rule:
     suffixes: ['_i', '_o', '_b']
   signal_008:
     disable: false
-    prefixes: ['r_', 'w_']
+    prefixes: ['s_']
+  process_017:
+    case: regex
+    regex: p_[a-zA-Z_]*
+  process_019:
+    case: regex
+    regex: p_[a-zA-Z_]*
   process_036:
     disable: false
     prefixes: ['p_']
   loop_statement_600:
     disable: false
     prefixes: ['l_']
+  function_600:
+    disable: false
+  generate_017:
+    disable: false
+  block_601:
+    disable: false
+    prefixes: [b_]
+  entity_008:
+    case: lower
+  entity_012:
+    case: lower
+  architecture_011:
+    case: lower
+  architecture_013:
+    case: lower
+  architecture_014:
+    case: lower
+  alias_declaration_600:
+    desable: false
+  instantiation_008:
+    case: regex
+    regex: i_[a-zA-Z_]*
+  instantiation_601:
+    disable: false
+    prefixes: [i_]
 
   # Instantiation
-  instantiation_028:
-    case: upper
   instantiation_034:
     disable: true
 
@@ -73,6 +102,49 @@ rule:
     disable: true
   signal_007:
     disable: true
+
+  # Blank lines
+  loop_statement_200:
+    disable: true
+  loop_statement_201:
+    disable: true
+  loop_statement_202:
+    disable: true
+  loop_statement_203:
+    disable: true
+  process_015:
+    style: require_comment
+  process_022:
+    disable: true
+  process_023:
+    disable: true
+  process_026:
+    disable: true
+  process_027:
+    disable: true
+  if_030:
+    disable: true
+  if_031:
+    disable: true
+  case_007:
+    disable: true
+  case_010:
+    disable: true
+  subprogram_body_203:
+    disable: true
+  subprogram_body_204:
+    disable: true
+  function_006:
+    disable: true
+
+  exponent_500:
+    case: upper
+  assert_005:
+    disable: true
+  length_001:
+    length: 100
+  if_002:
+    parenthesis: remove
 
 indent:
   tokens:
