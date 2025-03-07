@@ -1,0 +1,110 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "vsg_check",
+      "type": "shell",
+      "command": "vsg -f '${relativeFile}' --all_phases --style jcl -c '${userHome}/dotfiles/vhdl/vsg_rules.yaml' vsg_rules.yaml",
+      "problemMatcher": {
+        "owner": "vsg",
+        "fileLocation": ["autoDetect", "${workspaceFolder}"],
+        "pattern": [
+          {
+            "regexp": "^File:  ([^\\s]*)\\s*$",
+            "file": 1
+          },
+          { // match =======
+            "regexp": "^.*$"
+          },
+          { // match Phase
+            "regexp": "^.*$"
+          },
+          { // match Total Rules Checked
+            "regexp": "^.*$"
+          },
+          { // match Total Violations
+            "regexp": "^.*$"
+          },
+          { // match Error count
+            "regexp": "^.*$"
+          },
+          { // match Warning count
+            "regexp": "^.*$"
+          },
+          { // match ------
+            "regexp": "^.*$"
+          },
+          { // match Rule/severity/line/solution header
+            "regexp": "^.*$"
+          },
+          { // match ------
+            "regexp": "^.*$"
+          },
+          {
+            "regexp": "^  ([^\\s]*_\\d*)\\s*. ([^\\s]*)\\s*.\\s*([^\\s]*) . (.*)$",
+            "code": 1,
+            "severity": 2,
+            "location": 3,
+            "message": 4,
+            "loop": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "vsg-fix",
+      "type": "shell",
+      "command": "vsg -f '${relativeFile}' --fix --style jcl -c '${userHome}/dotfiles/vhdl/vsg_rules.yaml' vsg_rules.yaml",
+      "problemMatcher": {
+        "owner": "vsg",
+        "fileLocation": ["autoDetect", "${workspaceFolder}"],
+        "pattern": [
+          {
+            "regexp": "^File:  ([^\\s]*)\\s*$",
+            "file": 1
+          },
+          { // match =======
+            "regexp": "^.*$"
+          },
+          { // match Phase
+            "regexp": "^.*$"
+          },
+          { // match Total Rules Checked
+            "regexp": "^.*$"
+          },
+          { // match Total Violations
+            "regexp": "^.*$"
+          },
+          { // match Error count
+            "regexp": "^.*$"
+          },
+          { // match Warning count
+            "regexp": "^.*$"
+          },
+          { // match ------
+            "regexp": "^.*$"
+          },
+          { // match Rule/severity/line/solution header
+            "regexp": "^.*$"
+          },
+          { // match ------
+            "regexp": "^.*$"
+          },
+          {
+            "regexp": "^  ([^\\s]*_\\d*)\\s*. ([^\\s]*)\\s*.\\s*([^\\s]*) . (.*)$",
+            "code": 1,
+            "severity": 2,
+            "location": 3,
+            "message": 4,
+            "loop": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "vsg-check-all",
+      "type": "shell",
+      "command": "vsg -f **/*.vhd -of syntastic --all_phases --style jcl -c '${userHome}/dotfiles/vhdl/vsg_rules.yaml' '${workspaceFolder}/vsg_rules.yaml'"
+    }
+  ]
+}

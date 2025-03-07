@@ -31,6 +31,9 @@ rule:
     prefix_exceptions: g_
   generic_020:
     disable: false
+  generic_map_002:
+    case: upper
+    prefix_exceptions: g_
   generic_map_601:
     disable: false
   port_025:
@@ -41,10 +44,10 @@ rule:
     prefixes: ['s_']
   process_017:
     case: regex
-    regex: p_[a-zA-Z_]*
+    regex: p_[a-zA-Z_0-9]*
   process_019:
     case: regex
-    regex: p_[a-zA-Z_]*
+    regex: p_[a-zA-Z_0-9]*
   process_036:
     disable: false
     prefixes: ['p_']
@@ -72,7 +75,7 @@ rule:
     desable: false
   instantiation_008:
     case: regex
-    regex: i_[a-zA-Z_]*
+    regex: i_[a-zA-Z_0-9]*
   instantiation_601:
     disable: false
     prefixes: [i_]
@@ -86,12 +89,16 @@ rule:
     style: no_blank_line_unless_different_library
   concurrent_006:
     disable: true
+  process_033:
+    disable: true
   process_400:
     disable: true
   architecture_026:
     blank_line_ends_group: 'yes'
+  architecture_027:
+    disable: true
   architecture_029:
-    disable: 'yes'
+    blank_line_ends_group: 'yes'
   type_011:
     style: no_blank_line
 
@@ -145,6 +152,14 @@ rule:
     length: 100
   if_002:
     parenthesis: remove
+
+  # Whitespace
+  process_002:
+    number_of_spaces: 0
+
+  # Allignment
+  entity_017:
+    blank_line_ends_group : yes
 
 indent:
   tokens:
