@@ -56,6 +56,10 @@ rule:
     prefixes: ['l_']
   function_600:
     disable: false
+  generate_005:
+    case: lower
+  generate_012:
+    case: lower
   generate_017:
     disable: false
   block_601:
@@ -101,6 +105,10 @@ rule:
     blank_line_ends_group: 'yes'
   type_011:
     style: no_blank_line
+  subtype_202:
+    style: no_blank_line
+  subprogram_body_400:
+    disable: true
 
   # Default assignments
   variable_007:
@@ -137,11 +145,17 @@ rule:
     disable: true
   case_010:
     disable: true
+  subprogram_body_201:
+    disable: true
+  subprogram_body_202:
+    disable: true
   subprogram_body_203:
     disable: true
   subprogram_body_204:
     disable: true
   function_006:
+    disable: true
+  procedure_200:
     disable: true
 
   exponent_500:
@@ -152,6 +166,9 @@ rule:
     length: 100
   if_002:
     parenthesis: remove
+
+  conditional_waveforms_001:
+    allow_single_line: yes
 
   # Whitespace
   process_002:
