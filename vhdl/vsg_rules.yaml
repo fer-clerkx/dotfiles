@@ -109,6 +109,8 @@ rule:
     style: no_blank_line
   subprogram_body_400:
     disable: true
+  component_017:
+    blank_line_ends_group: 'yes'
 
   # Default assignments
   variable_007:
