@@ -95,6 +95,8 @@ rule:
     disable: true
   process_033:
     disable: true
+  process_035:
+    disable: true
   process_400:
     disable: true
   architecture_026:
@@ -138,6 +140,10 @@ rule:
   process_026:
     disable: true
   process_027:
+    disable: true
+  if_008:
+    disable: true
+  if_011:
     disable: true
   if_030:
     disable: true
